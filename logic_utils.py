@@ -29,7 +29,7 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+# FIX: Refactored check_guess from app.py into logic_utils.py, fixed swapped hint messages using agent mode
 def check_guess(guess, secret):
     """
     Compare guess to secret and return (outcome, message).
@@ -42,6 +42,8 @@ def check_guess(guess, secret):
     except Exception:
         secret_int = None
 
+    # FIXME: Logic breaks here
+    # FIX: AI identified swapped hint messages, corrected using chat mode Too High now says Go LOWER and Too Low says Go HIGHER
     if secret_int is not None:
         if guess == secret_int:
             return "Win", "🎉 Correct!"

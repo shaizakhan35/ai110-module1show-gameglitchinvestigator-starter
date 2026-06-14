@@ -31,6 +31,7 @@ if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
 # FIXME: Logic breaks here
+# FIX: AI identified attempts started at 1, corrected to 0 using chat mode
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
@@ -74,7 +75,9 @@ with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
 # FIXME: Logic breaks here
+# FIX: AI helped refactor new_game block to reset all state and use correct difficulty range
 if new_game:
+    # FIX: AI identified attempts started at 1, corrected to 0 using chat mode
     st.session_state.attempts = 0
     st.session_state.score = 0
     st.session_state.secret = random.randint(low, high)
