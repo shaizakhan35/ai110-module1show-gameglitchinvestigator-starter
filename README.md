@@ -28,18 +28,22 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Describe the game's purpose.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
+The game is a number guessing game where you try to guess a secret number within a limited number of attempts based on the difficulty. Bugs I found included backwards hints, the new game button not working and attempts starting at 1 instead of 0. I fixed the hints by moving check_guess to logic_utils.py and swapping the messages from "Go Lower" to "Go Higher" and vice-versa, and fixed the button by resetting all state including score and status on new game.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User selects Normal difficulty (range 1-100, 8 attempts)
+2. User enters a guess of 40 -> game returns "Too Low, Go HIGHER"
+3. User enters a guess of 70 -> game returns "Too High, Go LOWER"
+4. User enters a guess of 55 -> "Too Low, Go HIGHER"
+5. User enters a guess of 63 -> "Correct!"
+6. Game ends and shows final score
+7. User clicks New Game -> score, history and text input all reset
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+
+**Screenshot** *(optional)*: ![alt text](image.png)<!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
@@ -48,7 +52,19 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 # pytest tests/
 # ========================= X passed in 0.XXs =========================
 ```
+ pytest
+====================== test session starts =======================
+platform win32 -- Python 3.13.7, pytest-9.0.3, pluggy-1.6.0
+rootdir: C:\Users\ConneXionS\Downloads\project1\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.13.0
+collected 4 items                                                 
+
+tests\test_game_logic.py ....                               [100%]
+
+======================= 4 passed in 0.05s ========================
 
 ## 🚀 Stretch Features
 
 - [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+
+I added color-coded hints where "Too High" displays in red and "Too Low" displays in blue inorder to make the game more visually appealing. I also made the win display in green. I also added a Hot/Cold indicator that shows 🔥 when the guess is within 10 of the secret and 🧊 when the guess is far away. The check_guess function in logic_utils.py was updated to support the hot/cold logic by adding a new get_hot_cold_indicator function.
