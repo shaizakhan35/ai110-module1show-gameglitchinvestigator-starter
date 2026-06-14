@@ -41,8 +41,7 @@ Claude code suggested clearing the text input after clicking New Game by directl
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
-I decided a bug was really fixed when the live game behaved correctly and pytest passed. For the hint bug, I ran pytest and all 3 tests passed, confirming that a guess of 60 against a secret of 50 correctly returns "Too High" with "Go LOWER". For the button bug, I manually tested by playing and clicking New Game, and verifying the score reset to 0 and the text input emptied. Claude Code helped generate the pytest cases by 
-writing tests that specifically targeted the hint and button fix, which helped me understand what the expected output should be for each scenario.
+I decided a bug was really fixed when the live game behaved correctly and pytest passed. For the hint bug, I ran pytest and all 3 tests passed, confirming that a guess of 60 against a secret of 50 correctly returns "Too High" with "Go LOWER". For the button bug, I manually tested by playing and clicking New Game, and verifying the score reset to 0 and the text input emptied. Claude Code helped generate the pytest cases by writing tests that specifically targeted the hint and button fix, which helped me understand what the expected output should be for each scenario.
 ---
 
 ## 4. What did you learn about Streamlit and state?
@@ -58,4 +57,4 @@ The Streamlit app reruns the whole script every time you interact with it, so va
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
-I want to keep using FIXME comments before touching any bug, it kept me organized. I also would continue prompting this way by providing details and pinpointing the bug exactly to get accurate results. Next time I would review the diff more carefully and test each change in more detail before commiting. This project made me realize AI code can look fine but still have hidden logic bugs. I realised the imporatnce of running pytest and manually playing through the game as it showed me things I wouldn't have caught just by reading the code.
+I want to keep using FIXME comments before touching any bug, it kept me organized. I also would continue prompting this way by providing details and pinpointing the bug exactly to get accurate results. Next time I would review the diff more carefully and test each change in more detail before commiting. This project made me realize AI code can look fine but still have hidden logic bugs. I realised the importance of running pytest and manually playing through the game as it showed me things I wouldn't have caught just by reading the code.
