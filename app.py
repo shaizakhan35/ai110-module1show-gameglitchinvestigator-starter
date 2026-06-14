@@ -77,6 +77,7 @@ if new_game:
     st.session_state.secret = random.randint(low, high)
     st.session_state.status = "playing"
     st.session_state.history = []
+    st.session_state[f'guess_input_{difficulty}'] = ''
     st.success("New game started.")
     st.rerun()
 
