@@ -29,6 +29,22 @@ def parse_guess(raw: str):
 
     return True, value, None
 
+
+def get_hot_cold_indicator(guess, secret):
+    """
+    Return a hot/cold emoji based on how close the guess is to the secret.
+
+    🔥 when within 10, 🧊 when far away.
+    """
+    try:
+        secret_int = int(secret)
+        guess_int = int(guess)
+    except Exception:
+        return "🧊"
+
+    return "🔥" if abs(guess_int - secret_int) <= 10 else "🧊"
+
+
 # FIX: Refactored check_guess from app.py into logic_utils.py, fixed swapped hint messages using agent mode
 def check_guess(guess, secret):
     """

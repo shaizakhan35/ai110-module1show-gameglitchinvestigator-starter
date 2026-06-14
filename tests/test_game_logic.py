@@ -17,3 +17,11 @@ def test_guess_too_low():
     outcome, message = check_guess(40, 50)
     assert outcome == "Too Low"
     assert message == "📈 Go HIGHER!"
+
+
+def test_hot_cold_indicator():
+    from logic_utils import get_hot_cold_indicator
+
+    assert get_hot_cold_indicator(50, 55) == "🔥"
+    assert get_hot_cold_indicator(50, 40) == "🔥"
+    assert get_hot_cold_indicator(50, 61) == "🧊"
