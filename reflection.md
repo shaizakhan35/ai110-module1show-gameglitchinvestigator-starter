@@ -40,7 +40,8 @@ Claude code suggested clearing the text input after clicking New Game by directl
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
-I decided a bug was really fixed when the live game behaved correctly and pytest passed. For the hint bug, I ran pytest and all 3 tests passed. I also ran the game which ended up confirming that a guess of 60 against a secret of 50 correctly returns "Too High" with "Go LOWER". For the button bug, I manually tested by playing and clicking New Game and verifying the score reset to 0 and the text input emptied. Claude Code helped generate the pytest cases by writing tests that specifically targeted the hint and button fix, which helped me understand what the expected output should be for each scenario.
+I decided a bug was really fixed when the live game behaved correctly and pytest passed. For the hint bug, I ran pytest and 3 tests passed. I also played the game which also confirmed thats a guess of 60 against a secret of 50 correctly returns "Too High" with "Go LOWER". For the button bug, I manually tested by playing and clicking the New Game buttonand verified the score reset to 0 and the text input emptied. Claude code helped my generate the pytest by writing tests that specifically targetted the hint and button fix, which helped me understand what the expected output should be for each scenario.
+
 ---
 
 ## 4. What did you learn about Streamlit and state?
