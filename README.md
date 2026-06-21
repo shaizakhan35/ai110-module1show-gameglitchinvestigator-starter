@@ -35,10 +35,10 @@ The game is a number guessing game where you try to guess a secret number within
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
 1. User selects Normal difficulty (range 1-100, 8 attempts)
-2. User enters a guess of 40 -> game returns "Too Low, Go HIGHER"
+2. User enters a guess of 5 -> game returns "Too Low, Go HIGHER"
 3. User enters a guess of 70 -> game returns "Too High, Go LOWER"
-4. User enters a guess of 55 -> "Too Low, Go HIGHER"
-5. User enters a guess of 63 -> "Correct!"
+4. User enters a guess of 8 -> "Too Low, Go HIGHER"
+5. User enters a guess of 10 -> "Correct!"
 6. Game ends and shows final score
 7. User clicks New Game -> score, history and text input all reset
 
