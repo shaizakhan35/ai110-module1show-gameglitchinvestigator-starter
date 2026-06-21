@@ -40,7 +40,7 @@ Claude code suggested clearing the text input after clicking New Game by directl
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
-I decided a bug was really fixed when the live game behaved correctly and pytest passed. For the hint bug, I ran pytest and 3 tests passed. I also played the game which also confirmed thats a guess of 60 against a secret of 50 correctly returns "Too High" with "Go LOWER". For the button bug, I manually tested by playing and clicking the New Game buttonand verified the score reset to 0 and the text input emptied. Claude code helped my generate the pytest by writing tests that specifically targetted the hint and button fix, which helped me understand what the expected output should be for each scenario.
+I decided a bug was really fixed when the live game behaved correctly and pytest passed. For the hint bug, I ran pytest and 3 tests passed. I also played the game which also confirmed that a guess of 60 against a secret of 50 correctly returns "Too High" with "Go LOWER". For the button bug, I manually tested by playing and clicking the New Game buttonand verified the score reset to 0 and the text input emptied. Claude code helped me generate the pytest by writing tests that specifically targetted the hint and button fix, which helped me understand what the expected output should be for each scenario.
 
 ---
 
