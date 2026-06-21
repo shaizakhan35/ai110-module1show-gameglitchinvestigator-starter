@@ -73,4 +73,4 @@ I gave both models the buggy check_guess function and asked them to find and fix
 
 **Which did you prefer and why?**
 
-I preferred Claude here mostly because it didn't just fix the one bug in only and pointed out how this bug and the type-switching bug were connected. This helped me understand the code better overall. Gemini was also correct but the explanations felt a bit long for what it was trying to explain.<!-- Your conclusion -->
+I preferred Claude here mostly because it didn't just fix the one bug only and pointed out how this bug and the type-switching bug were connected. This helped me understand the code better overall. Gemini was also correct but the explanations felt a bit long for what it was trying to explain.<!-- Your conclusion -->
